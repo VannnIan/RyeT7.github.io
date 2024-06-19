@@ -80,6 +80,20 @@ input{
     border: 2 solid #B9B4C7;;
 }
 
+.upload{
+    display: none;
+}
+
+.upload-button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.upload-button img{
+    width: 40px;
+    margin: 0 auto;
+}
+
 table{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-collapse: collapse;

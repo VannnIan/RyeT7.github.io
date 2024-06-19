@@ -142,53 +142,118 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar .logoCard {
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 25rem;
+    overflow-x: auto;
+    align-content: space-evenly;
+    margin: var(--card-margin);
+}
+
+.sidebar .logoCard{
+    position: sticky;
     display: flex;
     flex-direction: row;
+    /* top: 3rem; */
     background-color: var(--color-dark);
     border-radius: var(--border-card-radius);
     font-size: 1.7rem;
-    padding: 0.5rem; /* Reduced padding */
-    margin-bottom: 1rem; /* Added margin-bottom */
+    /* margin-bottom: 2.5rem; */
+    overflow-x: hidden;
+    padding: var(--card-padding);
+    margin: var(--card-margin);
 }
 
-.sidebar .menu {
+.sidebar h1{
+    position: relative;
+    margin-left: 4rem;
+}
+
+.sidebar .logoBuildMaster .logoImage{
+    position: absolute;
+    margin: auto;
+    left: 1rem;
+    width: 2rem;
+    top: 2.5rem;
+    padding: var(--card-padding);
+    aspect-ratio: 1/1;
+}
+
+.sidebar .logoBuildMaster{
+    color: var(--color-white);
+}
+
+.menu{
     background-color: var(--color-dark);
     border-radius: var(--border-card-radius);
-    margin-bottom: 1rem; /* Reduced margin */
+    margin: var(--card-margin);
 }
 
-.sidebar .menu .menu-items {
+.menu span{
+    margin-left: 2rem;
+    position: absolute;
+}
+
+.menu .menu-items{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    padding: 0.8rem; /* Reduced padding */
-    margin: 0.5rem 0; /* Reduced margin */
+    translate: all 300ms ease;
+    padding: 1rem;
 }
 
-.sidebar .menu .menu-items h3 {
-    color: var(--color-white);
+.menu .menu-items h3{
+    color: #FAF0E6;
+    margin-left: 5rem;
 }
 
-.sidebar .menu .menu-items:hover {
+.menu-items:hover{
     background: var(--color-light);
     color: var(--color-active);
-    border-radius: var(--border-card-radius);
 }
 
-.sidebar .profile {
+.menu-items:first-child:hover{
+    border-top-right-radius: var(--border-card-radius);
+    border-top-left-radius: var(--border-card-radius);
+}
+
+.menu-items:last-child:hover{
+    border-bottom-right-radius: var(--border-card-radius);
+    border-bottom-left-radius: var(--border-card-radius);
+}
+
+.menu .active::before{
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background-color: var(--color-dark)
+}
+
+.profile{
     display: flex;
     flex-direction: row;
     background-color: var(--color-dark);
-    padding: 0.5rem; /* Reduced padding */
+    padding: var(--card-padding);
     border-radius: var(--border-card-radius);
-    margin: 0.5rem 0; /* Reduced margin */
+    margin: var(--card-margin);
     overflow: hidden;
-    align-items: center;
 }
 
-.sidebar .profile .profileNames h2,
-.sidebar .profile .profileNames h4 {
-    margin: 0;
+.profile img{
+    position: absolute;
+    width: 5rem;
+    aspect-ratio: 1/1;
+    background-color: var(--color-white);
+    border-radius: 100%;
+}
+
+.profile .profileNames{
+    font-size: 0.7rem;
+    margin-left: 7rem;
 }

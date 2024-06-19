@@ -9,7 +9,7 @@
 
     --border-card-radius: 2rem;
     --card-padding: 1rem;
-    --card-margin: 0.7rem 0;
+    --card-margin: 0.7rem 0 0.7rem 0;
 }
 
 body {
@@ -30,7 +30,7 @@ a {
     color: var(--color-white);
 }
 
-nav {
+/* nav {
     display: flex;
     flex-direction: row;
     background-color: #1da1f2;
@@ -67,23 +67,26 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-}
+} */
 
-.container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    margin-top: 80px; /* Adjust margin-top to account for fixed header */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60%;
+    /* justify-content: flex-end; */
 }
 
 .main-content {
+    width: 100%;
     flex: 3;
-    margin-left: 20px; /* Add margin-left to create space between sidebar and main content */
+    margin: 3rem;
+    margin-left: 50%;
     background-color: #fff;
-    padding: 20px;
+    padding: 80px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    color: #000; /* Ensure text color is readable on white background */
+    color: #000;
 }
 
 .compose-tweet {
@@ -128,18 +131,32 @@ nav ul li a:hover {
     margin-top: 0;
 }
 
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: 80px; /* Adjust the position to account for the fixed header */
-    width: 20rem;
-    margin: var(--card-margin);
+
+:root {
+    --color-dark: #352F44;
+    --color-lighter: #5C5470;
+    --color-light: #B9B4C7;
+    --color-white: #FAF0E6;
+    --color-active: #3c296b;
+
+    --border-card-radius: 2rem;
+    --card-padding: 1rem;
+    --card-margin: 0.7rem 0 0.7rem 0;
+}
+
+body {
     color: var(--color-white);
-    background-color: var(--color-dark);
-    padding: var(--card-padding);
-    border-radius: var(--border-card-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-lighter);
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-white);
 }
 
 .sidebar{
@@ -256,4 +273,93 @@ nav ul li a:hover {
 .profile .profileNames{
     font-size: 0.7rem;
     margin-left: 7rem;
+}
+
+main{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.profileBuildMaster{
+    padding: var(--card-padding);
+    margin: var(--card-margin);
+    position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.profileBuildMaster img{
+    width: 20rem;
+}
+
+.profileBuildMaster .header{
+    display: flex;
+    flex-direction: column;
+}
+
+.profileBuildMaster .buildMasterNames{
+    font-size: 1.7rem;
+    text-align-last: right;
+}
+
+.rateStars {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.allRatings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.rating label {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.rating label::before {
+    content: "\2606";
+        transition: 0.2s;
+}
+
+.rating label:hover::before{
+    content: "\2605";
+    color: yellow;    
+}
+
+.rating input:checked ~ label::before{
+    content: "\2605";
+    color: yellow;
+    transition-delay: 0.1s;
+}
+
+.profileCarousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+
+.carousel ul {
+    list-style: none;
 }

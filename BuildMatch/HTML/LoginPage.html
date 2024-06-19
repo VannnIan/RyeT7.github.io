@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMatch - Login</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <nav>
+        <img src="#" alt="logo-buildmatch">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="split-background">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="centered-card">
+        <div class="card">
+            <h2>Login</h2>
+            <form id="loginForm" action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                
+                <button type="submit">Login</button>
+                <p><a href="#">Forgot my password</a></p>
+                <p><a href="RegisterPage.html">Don't have an account? Sign Up Here</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

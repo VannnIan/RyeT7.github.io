@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Home Page</title>
+    <link rel="stylesheet" href="../CSS/socialStyles.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">MySocial</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <a href="#" class="logoCard logoBuildMaster">
+                <h1>BuildMaster</h1>
+            </a>
+            <div class="profile">
+                <a class="profileNames"><h2>Username</h2><h4>@username</h4></a>
+            </div>
+            <div class="menu">
+                <a href="#" class="menu-items">
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="menu-items">
+                    <h3>Messages</h3>
+                </a>
+                <a href="#" class="menu-items">
+                    <h3>Notifications</h3>
+                </a>
+                <a href="#" class="menu-items">
+                    <h3>History</h3>
+                </a>
+                <a href="#" class="menu-items">
+                    <h3>Explore</h3>
+                </a>
+                <a href="#" class="menu-items">
+                    <h3>Settings</h3>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="compose-tweet">
+                <textarea id="tweetContent" placeholder="What's happening?"></textarea>
+                <button onclick="postTweet()">Tweet</button>
+            </div>
+            <div id="posts">
+                <div class="post">
+                    <h2>Post Title 1</h2>
+                    <p>This is an example of a social media post. It contains text and possibly other media like images or videos.</p>
+                </div>
+                <div class="post">
+                    <h2>Post Title 2</h2>
+                    <p>This is another example of a social media post. It provides information or shares content with friends and followers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/socialScript.js"></script>
+</body>
+</html>

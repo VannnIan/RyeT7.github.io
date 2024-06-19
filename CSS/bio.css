@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montaga&family=Oswald:wght@200..700&family=Poetsen+One&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --color-dark: #352F44;
+    --color-lighter: #5C5470;
+    --color-light: #B9B4C7;
+    --color-white: #FAF0E6;
+    --color-active: #3c296b;
+
+    --border-card-radius: 2rem;
+    --card-padding: 1rem;
+    --card-margin: 0.7rem 0 0.7rem 0;
+}
+
+body {
+    color: var(--color-white);
+    background-color: var(--color-lighter);
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25vw auto;
+    justify-content: flex-end;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 25rem;
+    overflow-x: auto;
+    align-content: space-evenly;
+    margin: var(--card-margin);
+}
+
+.sidebar .logoCard{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    /* top: 3rem; */
+    background-color: var(--color-dark);
+    border-radius: var(--border-card-radius);
+    font-size: 1.7rem;
+    /* margin-bottom: 2.5rem; */
+    overflow-x: hidden;
+    padding: var(--card-padding);
+    margin: var(--card-margin);
+}
+
+.sidebar h1{
+    position: relative;
+    margin-left: 4rem;
+}
+
+.sidebar .logoBuildMaster .logoImage{
+    position: absolute;
+    margin: auto;
+    left: 1rem;
+    width: 2rem;
+    top: 2.5rem;
+    padding: var(--card-padding);
+    aspect-ratio: 1/1;
+}
+
+.sidebar .logoBuildMaster{
+    color: var(--color-white);
+}
+
+.menu{
+    background-color: var(--color-dark);
+    border-radius: var(--border-card-radius);
+    margin: var(--card-margin);
+}
+
+.menu span{
+    margin-left: 2rem;
+    position: absolute;
+}
+
+.menu .menu-items{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    translate: all 300ms ease;
+    padding: 1rem;
+}
+
+.menu .menu-items h3{
+    color: #FAF0E6;
+    margin-left: 5rem;
+}
+
+.menu-items:hover{
+    background: var(--color-light);
+    color: var(--color-active);
+}
+
+.menu-items:first-child:hover{
+    border-top-right-radius: var(--border-card-radius);
+    border-top-left-radius: var(--border-card-radius);
+}
+
+.menu-items:last-child:hover{
+    border-bottom-right-radius: var(--border-card-radius);
+    border-bottom-left-radius: var(--border-card-radius);
+}
+
+.menu .active::before{
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background-color: var(--color-dark)
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-dark);
+    padding: var(--card-padding);
+    border-radius: var(--border-card-radius);
+    margin: var(--card-margin);
+    overflow: hidden;
+}
+
+.profile img{
+    position: absolute;
+    width: 5rem;
+    aspect-ratio: 1/1;
+    background-color: var(--color-white);
+    border-radius: 100%;
+}
+
+.profile .profileNames{
+    font-size: 0.7rem;
+    margin-left: 7rem;
+}
+
+main{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.profileBuildMaster{
+    padding: var(--card-padding);
+    margin: var(--card-margin);
+    position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.profileBuildMaster img{
+    width: 20rem;
+}
+
+.profileBuildMaster .header{
+    display: flex;
+    flex-direction: column;
+}
+
+.profileBuildMaster .buildMasterNames{
+    font-size: 1.7rem;
+    text-align-last: right;
+}
+
+.rateStars {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.allRatings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.rating label {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.rating label::before {
+    content: "\2606";
+        transition: 0.2s;
+}
+
+.rating label:hover::before{
+    content: "\2605";
+    color: yellow;    
+}
+
+.rating input:checked ~ label::before{
+    content: "\2605";
+    color: yellow;
+    transition-delay: 0.1s;
+}
+
+.profileCarousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+
+.carousel{
+    
+}
+
+.carousel ul {
+    list-style: none;
+}

@@ -27,9 +27,6 @@ a {
     color: var(--color-white);
 }
 
-
-
-
 .sidebar{
     display: flex;
     flex-direction: column;
@@ -38,6 +35,7 @@ a {
     overflow-x: auto;
     align-content: space-evenly;
     margin: var(--card-margin);
+    margin-left: 100px;
 }
 
 .sidebar .logoCard{
@@ -231,46 +229,49 @@ main{
     justify-content: flex-end;
 }
 
-.carousel{
-    
-}
-
-.carousel ul {
-    list-style: none;
-}
-
 .chat-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 90%;
+    /* max-width: 800px; */
     margin-top: 60px;
     border-radius: 10px;
     height: 800px;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* overflow: hidden; */
     margin-left: 100px;
     /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
   }
   
   .chat-header {
-    background-color: white;
+    background-color: var(--color-light);
     color:black;
     padding: 10px 15px;
     font-size: 18px;
     text-align: center;
-    font-weight: 800;
-    font-family: Cambria;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   
   .chat-messages {
+    width: 100%;
     padding: 30px;
+    height: 100%;
     overflow-y: scroll;
-    max-height: 400px; /* Adjust as needed */
+    max-height: 400px;
     /* width: 785px; */
-    background-color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    background-color: var(--color-dark);
   }
   
   .message {
+    margin-right: 50px;
     margin-bottom: 30px;
   }
   
@@ -279,9 +280,9 @@ main{
   }
   
   .message .text {
-    background-color: #f0f0f0;
+    background-color: var(--color-active);
     padding: 8px 12px;
-    color: black;
+    color: var(--color-white);
     border-radius: 10px;
     display: inline-block;
   }
@@ -301,12 +302,12 @@ main{
     border: none;
     background-color: #f9f9f9;
     position: absolute;
-    width: 800px;
+    width: 100%;
   }
   
   .input-box {
     position:absolute;
-    width: 770px;
+    width: 81.3rem;
     padding: 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -316,13 +317,13 @@ main{
   
   .send-btn {
     position: absolute;
-    margin-left: 730px  ;
+    margin-left: 76.9rem;
     padding: 13px 16px;
     border-radius: 10px;
     border-top-right-radius: 0px;
     font-size: large;
     font-style: normal;
-    background-color: black;
+    background-color: var(--color-active);
     color: white;
     border: none;
     cursor: pointer;
@@ -338,7 +339,6 @@ main{
     overflow: hidden; 
     border-radius: 0;
     box-sizing: border-box;
-           
   }
   
   .chat-messages::-webkit-scrollbar {

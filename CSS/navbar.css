@@ -1,18 +1,20 @@
 nav {
-    background-color: transparent; 
+    background-color: transparent;
     padding: 20px 0;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    position: relative; 
-    z-index: 10; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;  /* Changed from relative to fixed */
+    top: 0;  /* Stick to the top */
+    width: 100%;  /* Full width */
+    z-index: 10;
 }
 
 nav .logo {
-    margin-left: 20px; 
-    height: 60px; 
-    width: auto; 
-    padding: 2px; 
+    margin-left: 20px;
+    height: 60px;
+    width: auto;
+    padding: 2px;
 }
 
 nav ul {
@@ -28,7 +30,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000; 
+    color: #000000;
     font-weight: bold;
     padding: 8px 15px;
     border-radius: 50px;
@@ -36,5 +38,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #B9B4C7; 
+    background-color: #B9B4C7;
 }

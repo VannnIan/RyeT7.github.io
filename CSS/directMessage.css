@@ -17,6 +17,7 @@ body {
     background-color: var(--color-lighter);
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 a {
@@ -235,7 +236,7 @@ main{
     /* max-width: 800px; */
     margin-top: 60px;
     border-radius: 10px;
-    height: 800px;
+    height: 500px;
     overflow-x: hidden;
     /* overflow: hidden; */
     margin-left: 100px;
@@ -354,4 +355,36 @@ main{
     background-color: #f0f0f0;
   }
   
+.contacts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin-top: 150px;
+    margin-left: 100px;
+}
 
+.contact-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark);
+    width: 80%;
+    height: 10rem;
+    border-radius: 50px ;
+}
+
+.contact-card > *{
+    margin: 3px;
+}
+
+.contact-card:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.contact-card img {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    background-color: var(--color-white);
+    border-radius: 100%;
+}

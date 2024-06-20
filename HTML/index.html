@@ -3,101 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registation</title>
+    <title>BuildMaster Registration</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/style.css">
-    
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <a href="home.html" class="logo">Logo</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
     <section>
         <div class="container">
-            <div class="login">
+            <div class="left">
                 <h1>Build Master Register</h1>
-                
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit saepe, eum est quo ducimus illum quasi sint in perspiciatis, architecto excepturi magni. Possimus reiciendis tenetur odio ipsa maiores amet distinctio esse placeat iure animi! Voluptatem numquam vitae ex, nostrum eum hic deserunt quis aliquid nihil perferendis magni sed a autem! Voluptas harum fugiat enim, pariatur odit magnam praesentium odio dolores nemo amet, expedita maiores architecto distinctio est labore velit fugit aliquam laboriosam! Dolore quas ex iste asperiores perferendis aliquam ipsam esse iure quam, obcaecati velit sint culpa consequuntur aperiam expedita? Reiciendis exercitationem quasi aliquam vero culpa quo dolore laboriosam recusandae.</p>
+                <img src="../Assets/LOGO.jpeg" alt="">
+                <p>
+                    BuildMatch is a professional networking platform providing a way for organizations, businesses, and individuals to connect with those of professions related to engineering and structure building. BuildMatch facilitates employers to connect with contractors and engineers with specific job types in accordance to their needs, while simultaneously providing those with the trade skills with job opportunities. Users are provided with 24/7 customer service and are provided with the choice of accessing human help or help powered by a chatbot. 
+                </p>     
+                <p>
+                    BuildMatch values integrity and work safety, and hence, users who are classified as those with hands-on experience in the structure-making business and trade skills are required to submit direct proof of necessary certifications and/or experience, however, this is not limited to them, as employers are also required to provide proof of their legitimacy. 
+                </p>       
             </div>
             <div class="right">
-                <label for="">Full Name</label>
-                <input type="text"
-                placeholder="Celestine Wing">
-                <label for="">Email</label>
-                <input type="text" placeholder="Celestine@gmail.com">
-                <label for="">Choose your expertise:</label>
-                <select>
-                    <option value="Architect">Architect</option>
-                    <option value="Civil Engineer">Civil Engineer</option>
-                    <option value="Structural Engineer">Structural Engineer</option>
-                    <option value="Surveyor">Surveyor</option>
-                    <option value="Construction Manager">Construction Manager</option>
-                    <option value="Project Manager">Project Manager</option>
-                    <option value="Site Manager">Site Manager</option>
-                    <option value="Foreman">Foreman</option>
-                    <option value="Electrician">Electrician</option>
-                    <option value="Plumber">Plumber</option>
-                    <option value="HVAC Technician">HVAC Technician</option>
-                    <option value="Carpenter">Carpenter</option>
-                    <option value="Mason">Mason</option>
-                    <option value="Painter">Painter</option>
-                    <option value="Roofing Contractor">Roofing Contractor</option>
-                    <option value="Drywaller">Drywaller</option>
-                    <option value="Flooring Installer">Flooring Installer</option>
-                    <option value="Insulation Installer">Insulation Installer</option>
-                    <option value="Landscaper">Landscaper</option>
-                    <option value="Interior Designer">Interior Designer</option>
-                    <option value="Environmental Consultant">Environmental Consultant</option>
-                    <option value="Safety Officer">Safety Officer</option>
-                    <option value="Procurement Manager">Procurement Manager</option>
-                    <option value="Quality Control Inspector">Quality Control Inspector</option>
-                    <option value="Waste Management Specialist">Waste Management Specialist</option>
-                </select>
-                
-                <h1> </h1>
-                <div class="table-wrapper">
-                    <table class="table" width="600px">
-                        <thead bgcolor="#352F44" style="color: #FAF0E6;">
-                            <tr>
-                                <th width="200">Document Name</th>
-                                <th width="100">Verification Status</th>
-                                <th width="100">Upload</th>
-                            </tr>
-                        </thead>
-                        <tbody bgcolor="#B9B4C7" style="color: #352F44;">
-                            <tr>
-                                <td>ID Card</td>
-                                <td class="status">Not Verified</td>
-                                <td>
-                                    <input type="file" class="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-                                    <label for="uploading" class="upload-button">
-                                        <img src="../Assets/uploadIcon.png" alt="upload">
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Curriculum Vitae</td>
-                                <td class="status">Not Verified</td>
-                                <td>
-                                    <input type="file" class="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-                                    <label for="uploading" class="upload-button">
-                                        <img src="../Assets/uploadIcon.png" alt="upload">
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Portfolio</td>
-                                <td class="status">Not Verified</td>
-                                <td>
-                                    <input type="file" class="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-                                    <label for="uploading" class="upload-button">
-                                        <img src="../Assets/uploadIcon.png" alt="upload">
-                                    </label>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <h1> </h1>
-                <a href="">
-                    <button style="background-color: #352F44;color: aliceblue;border-radius: 5px; border: 25px; width: 200px;height:50px; font-size: x-large; font: bold;font-style: inherit;">Submit</button>
-            </a>
+                <form id="registrationForm">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" placeholder="Celestine Wing" >
+                    <span class="error-message" id="fullNameError"></span>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Celestine@gmail.com" >
+                    <span class="error-message" id="emailError"></span>
+
+                    <label for="expertise">Choose your expertise:</label>
+                    <select id="expertise" >
+                        <option value="">Select your expertise</option>
+                        <option value="Architect">Architect</option>
+                        <option value="Civil Engineer">Civil Engineer</option>
+                        <option value="Structural Engineer">Structural Engineer</option>
+                        <option value="Surveyor">Surveyor</option>
+                        <option value="Construction Manager">Construction Manager</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Site Manager">Site Manager</option>
+                        <option value="Foreman">Foreman</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="HVAC Technician">HVAC Technician</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Mason">Mason</option>
+                        <option value="Painter">Painter</option>
+                        <option value="Roofing Contractor">Roofing Contractor</option>
+                        <option value="Drywaller">Drywaller</option>
+                        <option value="Flooring Installer">Flooring Installer</option>
+                        <option value="Insulation Installer">Insulation Installer</option>
+                        <option value="Landscaper">Landscaper</option>
+                        <option value="Interior Designer">Interior Designer</option>
+                        <option value="Environmental Consultant">Environmental Consultant</option>
+                        <option value="Safety Officer">Safety Officer</option>
+                        <option value="Procurement Manager">Procurement Manager</option>
+                        <option value="Quality Control Inspector">Quality Control Inspector</option>
+                        <option value="Waste Management Specialist">Waste Management Specialist</option>
+                    </select>
+                    <span class="error-message" id="expertiseError"></span>
+
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Document Name</th>
+                                    <th>Verification Status</th>
+                                    <th>Upload</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Upload ID Card</td>
+                                    <td class="status">Not Verified</td>
+                                    <td><input type="file" class="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Upload CV</td>
+                                    <td class="status">Not Verified</td>
+                                    <td><input type="file" class="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Portfolio</td>
+                                    <td class="status">Not Verified</td>
+                                    <td><input type="file" class="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" ></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <button class="back-btn"><a href="home.html"></a>Go Back</button>
             </div>
         </div>
     </section>
